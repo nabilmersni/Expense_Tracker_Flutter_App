@@ -1,4 +1,5 @@
 import 'package:expense_tracker_app/screen/add_expense_modal.dart';
+import 'package:expense_tracker_app/theme/theme.dart';
 import 'package:expense_tracker_app/widget/expenses/expenses_list.dart';
 import 'package:expense_tracker_app/model/expense.dart';
 import 'package:flutter/material.dart';
@@ -92,7 +93,12 @@ class _ExpensesScreenState extends State<ExpensesScreen> {
         padding: const EdgeInsets.all(5),
         child: Column(
           children: [
-            const Text('Chart....'),
+            Text(
+              'Chart....',
+              style: Theme.of(context).textTheme.titleMedium!.copyWith(
+                    color: kLightColorScheme['primary'],
+                  ),
+            ),
             Expanded(child: listContent),
           ],
         ),

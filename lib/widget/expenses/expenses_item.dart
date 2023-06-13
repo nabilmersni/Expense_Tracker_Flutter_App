@@ -1,5 +1,6 @@
 import 'package:expense_tracker_app/model/expense.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ExpensesItem extends StatelessWidget {
   const ExpensesItem(this.expense, {super.key});
@@ -13,9 +14,8 @@ class ExpensesItem extends StatelessWidget {
         child: Column(children: [
           Text(
             expense.title,
-            style: const TextStyle(
-              fontSize: 18,
-            ),
+            // style: Theme.of(context).textTheme.displayLarge,
+            style: Theme.of(context).textTheme.titleMedium,
           ),
           Row(
             children: [
